@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+//I made few changes here
 @Service
 public class JobService {
 
@@ -22,7 +23,7 @@ public class JobService {
         repo.save(jobPost);
     }
 
-    public JobPost updateJob(int postId,JobPost updatedJob) {
+    public JobPost updateJob(int postId, JobPost updatedJob) {
         Optional<JobPost> existingJob = repo.findById(postId);
 
         if (existingJob.isPresent()) {
